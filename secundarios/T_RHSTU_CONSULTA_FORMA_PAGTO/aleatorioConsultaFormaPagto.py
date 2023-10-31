@@ -38,7 +38,7 @@ def aleatorioStatusPagamento():
         #if numero == 2:
         #posição lista, data consulta, 
 
-print(listaConsulta[2][4])
+
 cont=0
 texto=""
 data=""
@@ -61,9 +61,6 @@ ano = int(ano)
 
 
 
-
-velhodia = int(dia)
-velhomes = int(mes)
 
 
 def dataPagamento(idade):
