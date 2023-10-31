@@ -1,1 +1,1 @@
-https://github.com/MironMarins/cp2_2s-dados
+https://github.com/MironMarins/gerador_dados_cp2
