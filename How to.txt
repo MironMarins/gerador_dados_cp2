@@ -1,0 +1,68 @@
+INTRODUÇÃO:
+Nosso programa possui a função de gerar dados aleatorios para o banco de dados RHSTU,
+com a meta de proporssionar até mesmo um leigo a capacidade de gerar quantos desejar para preeche-lo.
+
+O PROGRAMA:
+O programa é separado três pasta principais e um arquivo main.py:
+*"Primarias" - contendo as pastas com os arquivos responsaveis por gerar dados aleatorios em formato csv para as tabelas
+que contem  APENAS CHAVES PRIMARIAS (SEM CHAVES ESTRANGEIRAS).
+*"Secundarias" = contendo as pastas com os arquivos responsaveis por gerar dados aleatorios em formato csv para as tabelas
+que contem  CHAVES PRIMARIAS e CHAVES ESTRANGEIRAS.
+*"Final" - é a pasta que conterá as todos os arquivos csv gerados por pelos arquivos em "primarias" e "secundarias"
+*"main.py" - é o arquivo possui os imports de todos arquivos desse projeto, sua função é servir como 'gatilho' para a 
+produção dos arquivos csv com os dados que irão popular o banco de dados, o tempo de produção de dados 
+dependerá a velocidade do sistema em que esta sendo rodado.
+
+GERAÇÃO DE DADOS:
+Em "primarias" e "secundarias" encontra-se pasta nomeadas com os nomes das tabelas para as quais elas irão gerar dados
+(a pasta "T_RHSTU_PACIENTES" gerará dados para a tabela "T_RHSTU_PACIENTES", por exemplo), dentro dessas pastas haverá
+sempre dois arquivos "aleatorios<<nome_tabela>>" responsavel pela geração e distribuição de dados aletórios que irão popular
+as tabelas, e "<<nome_tabela>>.py" que será responvel por gerar um lista de dicionarios que serão usadas para gerar cada arquivo csv.
+
+OBS: Se o usuario quiser gerar informações para uma tabela especifica basta rodar o arquivo "<<nome_tabela.py>>" 
+dentro da pasta "<<nome_tabela>>"
+OBS: As informações referentes as aos arquivos em "primarias" podem ser gerados a qualquer momento.
+ja as informações referentes as aos arquivos em "secundarias" só poderão ser geradas apos a geração das dos arquivos csv
+que contenham a mesmas suas chaves primarias respectivas as suas chaves estrangeiras.
+
+"RECHEANDO" O BANCO DE DADOS:
+
+Passo 1: Para gerar as informações de todas as tabelas de uma vez, basta abrir e rodar arquivo main.py, como já mensionado
+os arquivos csv serão gerados na pasta "tabela final".
+
+Passo 2: Abrir oracleDeveloper
+
+Passo 3: Com o banco de dados já realiado clique com o botão direito na tabela a qual deseja colocar informações
+(de preferencia, comece com tabelas que não possuam chaves estrangeiras), clique com o botão esquerdo em "importar dados".
+
+passo 4: Com a janela de importação aberta, escolha o formato de arquivo csv, clique com o botão direito em "procurar" e 
+escolha o arquivo csv referente a tabela a qual deseja inserir dados e clique com o botão diretio em próximo.
+
+passo 5: Com a janela "médoto de importação" aberta escolha qual o medoto de importação deseja realizar (para essa atividade podemos escolher o metodo 
+"inserrir script").
+
+passo 6: na janela "escolher colunas" selecione as colunas as quais deseja inserir informações (para essa atividade vamos escolher todas).
+
+passo 7: na janela "definição de coluna" escolha a formatação dos dados que deseja inserrir em cada coluna da tabela 
+(para essa atividade vamos escolher todas).
+
+passo 8: na janela "concluir" clique em finalizar (se a opção "inserrir script" foi selecionada no "passo 5" o scrip sql sera altomaticamente 
+gerado).
+ 
+passo 9: com o script criado, clique com o botão esquerdo do mouse no script e clique com o botão esquerdo do mouse no icone "executar scrip"
+(ou precione o botão "f5"), em seguida clique com o botao esquerdo do mouse na opcão commit (ou precione o botão "F11")assim todas as informações do 
+script serão automaticamente adicionadas a tabela.
+
+passo 10: Repita as operações 4 a 9 com todos os arquivos csv em todas tabelas para ter seu banco de dados completo
+
+
+
+
+
+ 
+
+            
+
+
+
+ 
